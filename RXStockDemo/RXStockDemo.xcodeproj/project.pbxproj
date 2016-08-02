@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CCD25A3E1EFF0C600F10310 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E753B031F8EAEBD0C8806DFD /* libPods.a */; };
 		C985F6291D504323004D654D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F6281D504323004D654D /* main.m */; };
 		C985F62C1D504323004D654D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F62B1D504323004D654D /* AppDelegate.m */; };
 		C985F6341D504323004D654D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C985F6331D504323004D654D /* Assets.xcassets */; };
 		C985F6411D504358004D654D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F63F1D504358004D654D /* MainViewController.m */; };
 		C985F6421D504358004D654D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C985F6401D504358004D654D /* MainViewController.xib */; };
+		C985F6481D5045C5004D654D /* RXAppDynamicConstString.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F6471D5045C5004D654D /* RXAppDynamicConstString.m */; };
+		C985F64B1D50468C004D654D /* RXAppDynamicDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F64A1D50468C004D654D /* RXAppDynamicDefine.m */; };
+		C985F64E1D50469B004D654D /* RXAppDynamicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F64D1D50469B004D654D /* RXAppDynamicManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C1BECADEA5F82709F58A2294 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C985F6241D504323004D654D /* RXStockDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXStockDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C985F6281D504323004D654D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C985F62A1D504323004D654D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -24,6 +29,15 @@
 		C985F63E1D504358004D654D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C985F63F1D504358004D654D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C985F6401D504358004D654D /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		C985F6431D5044F6004D654D /* RXApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXApp-Prefix.pch"; sourceTree = "<group>"; };
+		C985F6461D5045C5004D654D /* RXAppDynamicConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAppDynamicConstString.h; sourceTree = "<group>"; };
+		C985F6471D5045C5004D654D /* RXAppDynamicConstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXAppDynamicConstString.m; sourceTree = "<group>"; };
+		C985F6491D50468C004D654D /* RXAppDynamicDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAppDynamicDefine.h; sourceTree = "<group>"; };
+		C985F64A1D50468C004D654D /* RXAppDynamicDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXAppDynamicDefine.m; sourceTree = "<group>"; };
+		C985F64C1D50469B004D654D /* RXAppDynamicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAppDynamicManager.h; sourceTree = "<group>"; };
+		C985F64D1D50469B004D654D /* RXAppDynamicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXAppDynamicManager.m; sourceTree = "<group>"; };
+		D709FE813921A34B7684DAAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E753B031F8EAEBD0C8806DFD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCD25A3E1EFF0C600F10310 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5652851032BBF97BBEF5D65D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E753B031F8EAEBD0C8806DFD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88D066156581058AA09956FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1BECADEA5F82709F58A2294 /* Pods.debug.xcconfig */,
+				D709FE813921A34B7684DAAA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C985F61B1D504323004D654D = {
 			isa = PBXGroup;
 			children = (
 				C985F6261D504323004D654D /* RXStockDemo */,
 				C985F6251D504323004D654D /* Products */,
+				88D066156581058AA09956FD /* Pods */,
+				5652851032BBF97BBEF5D65D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +90,7 @@
 		C985F6261D504323004D654D /* RXStockDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C985F6441D5045C5004D654D /* Utility */,
 				C985F62A1D504323004D654D /* AppDelegate.h */,
 				C985F62B1D504323004D654D /* AppDelegate.m */,
 				C985F6331D504323004D654D /* Assets.xcassets */,
@@ -71,9 +106,31 @@
 		C985F6271D504323004D654D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C985F6431D5044F6004D654D /* RXApp-Prefix.pch */,
 				C985F6281D504323004D654D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C985F6441D5045C5004D654D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C985F6451D5045C5004D654D /* RXAppDynamic */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C985F6451D5045C5004D654D /* RXAppDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				C985F6461D5045C5004D654D /* RXAppDynamicConstString.h */,
+				C985F6471D5045C5004D654D /* RXAppDynamicConstString.m */,
+				C985F6491D50468C004D654D /* RXAppDynamicDefine.h */,
+				C985F64A1D50468C004D654D /* RXAppDynamicDefine.m */,
+				C985F64C1D50469B004D654D /* RXAppDynamicManager.h */,
+				C985F64D1D50469B004D654D /* RXAppDynamicManager.m */,
+			);
+			path = RXAppDynamic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C985F63B1D504323004D654D /* Build configuration list for PBXNativeTarget "RXStockDemo" */;
 			buildPhases = (
+				6ED6534A3F317952439CED4C /* Check Pods Manifest.lock */,
 				C985F6201D504323004D654D /* Sources */,
 				C985F6211D504323004D654D /* Frameworks */,
 				C985F6221D504323004D654D /* Resources */,
+				F4A235827728388C06AE124A /* Embed Pods Frameworks */,
+				84B4C757AE570F505980335F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +200,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6ED6534A3F317952439CED4C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84B4C757AE570F505980335F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4A235827728388C06AE124A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C985F6201D504323004D654D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -147,7 +255,10 @@
 			files = (
 				C985F62C1D504323004D654D /* AppDelegate.m in Sources */,
 				C985F6411D504358004D654D /* MainViewController.m in Sources */,
+				C985F6481D5045C5004D654D /* RXAppDynamicConstString.m in Sources */,
+				C985F64E1D50469B004D654D /* RXAppDynamicManager.m in Sources */,
 				C985F6291D504323004D654D /* main.m in Sources */,
+				C985F64B1D50468C004D654D /* RXAppDynamicDefine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +349,11 @@
 		};
 		C985F63C1D504323004D654D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1BECADEA5F82709F58A2294 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "RXStockDemo/RXApp-Prefix.pch";
 				INFOPLIST_FILE = RXStockDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -251,9 +364,11 @@
 		};
 		C985F63D1D504323004D654D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D709FE813921A34B7684DAAA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "RXStockDemo/RXApp-Prefix.pch";
 				INFOPLIST_FILE = RXStockDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -281,6 +396,7 @@
 				C985F63D1D504323004D654D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
