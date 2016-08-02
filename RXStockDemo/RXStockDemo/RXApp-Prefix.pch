@@ -1,0 +1,119 @@
+//
+// Prefix header for all source files of the 'RXApp' target in the 'RXApp' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+
+
+#import <Foundation/Foundation.h>
+
+
+
+
+
+//#import "RXAppPch.h"
+
+
+//去掉nslog
+#ifndef __OPTIMIZE__
+//#define NSLog(__FORMAT__, ...) NSLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define DISABLE_CORE_LOG
+#define DISABLE_CONTROL_LOG
+#define NSLog(__FORMAT__, ...) {}
+#endif
+
+#pragma mark - cocoapod
+
+#import "MBProgressHUD+RXHeader.h"
+#import "MJRefresh.h"
+//#import "IQKeyboardManager.h"
+#import "TTTAttributedLabel.h"
+#import "UIImageView+WebCache.h"
+#import "JSONModel.h"
+#import "Masonry.h"
+#import "NSDate+Extension.h"
+#import <UMMobClick/MobClick.h>
+
+#import <PgySDK/PgyManager.h>
+#import <PgyUpdate/PgyUpdateManager.h>
+
+
+
+
+#pragma mark - My cocoapod
+
+#import "RXCategoryHeader.h"
+#import "RXVCMediatorHeader.h"
+#import "RXCTHeader.h"
+#import "RXTextView.h"
+#import "RXPaddingView.h"
+#import "RXVerifyButton.h"
+#import "RXPushTokenManager.h"
+#import "RXUserManager.h"
+#import "RXInfoHelper.h"
+#import "RXSDCHelper.h"
+#import "RXCheckView.h"
+#import "RXActionSheetView.h"
+#import "RXGuideManagerHeader.h"
+#import "RXTableViewItemHeader.h"
+#import "RXConfigManagerHeader.h"
+#import "RXPVHeader.h"
+#import "RXPopView.h"
+#import "RXInfiniteView.h"
+#import "RXLimitView.h"
+#import "RXView.h"
+#import "RXBannerView.h"
+
+
+#import "RXTVProtocolObject.h"
+
+#import "RXImagePickManager.h"
+
+
+
+
+
+#define k_UI_Color_Background  [UIColor rx_colorWithString:@"#0d0d0d"]
+#define k_UI_Color_Background2  [UIColor rx_colorWithString:@"#ededed"]
+#define k_UI_Color_Line        [UIColor rx_colorWithString:@"#e5e5e5"]
+#define k_UI_Color_Line2        [UIColor rx_colorWithString:@"#cbcbcb"]
+#define k_UI_Color_Line3        [UIColor rx_colorWithString:@"#cccccc"]
+#define K_UI_Color_MainText     [UIColor rx_colorWithString:@"#666666"]
+#define K_UI_Color_SubText     [UIColor rx_colorWithString:@"#999999"]
+#define k_UI_Color_OP_Background [UIColor rx_colorWithString:@"#333333"]
+#define k_UI_Color_OP_Line [UIColor rx_colorWithString:@"#2a2a2a"]
+
+
+#import "RXAppDefineHeader.h"
+
+
+
+#pragma mark - RX Dynamic App
+//
+#import "RXAppDynamicConstString.h"
+#import "RXAppDynamicDefine.h"
+#import "RXAppDynamicManager.h"
+
+
+
+//#import "RXUtils.h"
+//#import "MBProgressHUD+RXUtility.h"
+//
+//#pragma mark - App
+////
+
+
+
+#import "WXApi.h"
+
+#endif
+
+

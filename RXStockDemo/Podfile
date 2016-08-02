@@ -1,0 +1,71 @@
+
+
+
+
+
+pod 'YYKit'
+
+
+
+pod 'Color-Picker-for-iOS'
+#pod 'RXCoreText'
+pod 'RXVCMediator'
+pod 'RXVerifyButton'
+pod 'RXTextView'
+pod 'RXPaddingView'
+pod 'RXCategory'
+pod 'RXPushTokenManager'
+pod 'RXUserManager'
+pod 'RXInfoHelper'
+pod 'RXSDCHelper'
+pod 'RXTableViewItem'
+pod 'RXCheckView'
+pod 'RXActionSheetView'
+pod 'RXGuideManager'
+pod 'RXConfigManager'
+pod 'RXAppDefine'
+pod 'RXPopView'
+pod 'RXScrollView'
+pod 'RX3_WeChatSDK'
+pod 'RX3_TencentLiteSDK'
+pod 'WeiboSDK'
+pod 'AFNetworking+RX'
+
+pod 'RXBannerView'
+pod 'RXView'
+pod 'RXAddImagesView'
+pod 'RXImagePickManager'
+
+
+
+pod 'MJRefresh'
+pod 'MBProgressHUD+RX'
+pod 'TTTAttributedLabel'
+pod 'Masonry'
+#pod 'MWPhotoBrowser'
+#pod 'IQKeyboardManager'
+pod 'JSONModel'
+pod 'NSDate-Extension'
+pod 'UMengAnalytics'
+
+pod 'libqrencode'
+pod 'TZImagePickerController'
+
+
+pod 'Pgyer'
+pod 'PgyUpdate'
+
+pod 'SDWebImage', '~> 3.7'
+pod 'MWPhotoBrowser', '~> 2.1.2'
+pod 'RXCoreText'
+
+#pod 'AMap2DMap'
+#pod 'AMap3DMap'
+#pod 'AMapSearch'
+
+inhibit_all_warnings!
+
+
+
+
+
