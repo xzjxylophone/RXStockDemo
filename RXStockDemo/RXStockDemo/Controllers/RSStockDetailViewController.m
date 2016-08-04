@@ -1,23 +1,25 @@
 //
-//  RSStockListViewController.m
+//  RSStockDetailViewController.m
 //  RXStockDemo
 //
 //  Created by ceshi on 16/8/4.
 //  Copyright © 2016年 Rush. All rights reserved.
 //
 
-#import "RSStockListViewController.h"
+#import "RSStockDetailViewController.h"
 #import "RSStockObject.h"
-#import "RSStockListCell.h"
-@interface RSStockListViewController () <RXTVProtocolObjectDelegate>
+#import "RSStockDetailCell.h"
+
+@interface RSStockDetailViewController () <RXTVProtocolObjectDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) RXTVProtocolObject *rxTVProObject;
 
 
+@property (nonatomic, strong) RSStockObject *inputRSStockObject;
 @end
 
-@implementation RSStockListViewController
+@implementation RSStockDetailViewController
 
 
 
@@ -79,10 +81,6 @@
 - (void)loadCellData
 {
     
-    self.rxTVProObject.functionItems = @[[RSResManager sharedInstance].stockArray];
-    [self.tableView reloadData];
-    
-    
 }
 - (void)refresh
 {
@@ -92,14 +90,16 @@
 
 
 
+
 #pragma mark - RXTVProtocolObjectDelegate
 - (UITableViewCell *)tvObject:(RXTVProtocolObject *)tvObject tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id data = [tvObject itemWithIndexPath:indexPath];
-    NSString *identify = [RSStockListCell identifier];
-    RSStockListCell *cell = (RSStockListCell *)[tableView dequeueReusableCellWithIdentifier:identify];
+    NSString *identify = [RSStockDetailCell identifier];
+    RSStockDetailCell *cell = (RSStockDetailCell *)[tableView dequeueReusableCellWithIdentifier:identify];
     if (cell == nil) {
-        cell = [RSStockListCell cell];
+        cell = [RSStockDetailCell cell];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     [cell setData:data];
     return cell;
@@ -109,15 +109,9 @@
 // delegate
 - (CGFloat)tvObject:(RXTVProtocolObject *)tvObject tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [RSStockListCell cellHeight];
+    return [RSStockDetailCell cellHeight];
 }
-- (void)tvObject:(RXTVProtocolObject *)tvObject tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    id data = [tvObject itemWithIndexPath:indexPath];
-    NSDictionary *query = @{SKey_data:data};
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RSStockDetailViewController" query:query animate:YES];
-    
-}
+
 
 
 /*
