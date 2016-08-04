@@ -8,6 +8,7 @@
 
 #import "RSStockListViewController.h"
 #import "RSStockObject.h"
+#import "RSStockListCell.h"
 @interface RSStockListViewController () <RXTVProtocolObjectDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -95,12 +96,12 @@
 - (UITableViewCell *)tvObject:(RXTVProtocolObject *)tvObject tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id data = [tvObject itemWithIndexPath:indexPath];
-    //    NSString *identify = [DFStationListCell identifier];
-    //    DFStationListCell *cell = (DFStationListCell *)[tableView dequeueReusableCellWithIdentifier:identify];
-    //    if (cell == nil) {
-    //        cell = [DFStationListCell cell];
-    //    }
-    //    [cell setData:data];
+    NSString *identify = [RSStockListCell identifier];
+    RSStockListCell *cell = (RSStockListCell *)[tableView dequeueReusableCellWithIdentifier:identify];
+    if (cell == nil) {
+        cell = [RSStockListCell cell];
+    }
+    [cell setData:data];
     return nil;
 }
 
@@ -108,8 +109,7 @@
 // delegate
 - (CGFloat)tvObject:(RXTVProtocolObject *)tvObject tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    return [DFStationListCell cellHeight];
-    return 0;
+    return [RSStockListCell cellHeight];
 }
 - (void)tvObject:(RXTVProtocolObject *)tvObject tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

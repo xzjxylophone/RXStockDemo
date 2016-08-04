@@ -86,8 +86,8 @@
 #define k_UI_Color_Line        [UIColor rx_colorWithString:@"#e5e5e5"]
 #define k_UI_Color_Line2        [UIColor rx_colorWithString:@"#cbcbcb"]
 #define k_UI_Color_Line3        [UIColor rx_colorWithString:@"#cccccc"]
-#define K_UI_Color_MainText     [UIColor rx_colorWithString:@"#666666"]
-#define K_UI_Color_SubText     [UIColor rx_colorWithString:@"#999999"]
+#define k_UI_Color_MainText     [UIColor rx_colorWithString:@"#666666"]
+#define k_UI_Color_SubText     [UIColor rx_colorWithString:@"#999999"]
 #define k_UI_Color_OP_Background [UIColor rx_colorWithString:@"#333333"]
 #define k_UI_Color_OP_Line [UIColor rx_colorWithString:@"#2a2a2a"]
 
