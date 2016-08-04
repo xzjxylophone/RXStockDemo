@@ -7,7 +7,7 @@
 //
 
 #import "RSResManager.h"
-#import "RXStockObject.h"
+#import "RSStockObject.h"
 
 
 @implementation RSResManager
@@ -25,7 +25,7 @@
         NSMutableArray *resultArray = [NSMutableArray array];
         for (NSString *str in array) {
             
-            RXStockObject *object = [RXStockObject rxStockObjectWithString:str];
+            RSStockObject *object = [RSStockObject rsStockObjectWithString:str];
             if (object != nil) {
                 [resultArray addObject:object];
             }
@@ -38,7 +38,7 @@
 
 
 
-- (RSResManager *)sharedInstance
++ (RSResManager *)sharedInstance
 {
     static RSResManager *instance = nil;
     static dispatch_once_t onceToken;

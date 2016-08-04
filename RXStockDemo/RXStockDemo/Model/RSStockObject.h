@@ -1,5 +1,5 @@
 //
-//  RXStockObject.h
+//  RSStockObject.h
 //  RXStockDemo
 //
 //  Created by ceshi on 16/8/4.
@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RXStockObject : NSObject
+@interface RSStockObject : NSObject
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *identify;
 
 
-+ (id)rxStockObjectWithString:(NSString *)string;
++ (id)rsStockObjectWithString:(NSString *)string;
 
 @end

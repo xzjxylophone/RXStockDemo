@@ -7,7 +7,7 @@
 //
 
 #import "RSStockListViewController.h"
-
+#import "RSStockObject.h"
 @interface RSStockListViewController () <RXTVProtocolObjectDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -77,10 +77,11 @@
 #pragma mark - Private
 - (void)loadCellData
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"stock" ofType:@""];
-    NSString *str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     
-    NSLog(@"srt=%@",str);
+    self.rxTVProObject.functionItems = @[[RSResManager sharedInstance].stockArray];
+    [self.tableView reloadData];
+    
+    
 }
 - (void)refresh
 {
