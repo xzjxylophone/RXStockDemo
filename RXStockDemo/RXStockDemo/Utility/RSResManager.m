@@ -31,6 +31,13 @@
             }
             
         }
+        
+        [resultArray sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+            RSStockObject *so1 = obj1;
+            RSStockObject *so2 = obj2;
+            return [so1.identify compare:so2.identify];
+        }];
+        
         self.stockArray  = resultArray;
     }
     return self;

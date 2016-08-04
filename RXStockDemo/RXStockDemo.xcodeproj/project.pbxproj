@@ -24,6 +24,7 @@
 		C9DC3CF71D5349E40073C9B2 /* RSStockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3CF61D5349E40073C9B2 /* RSStockObject.m */; };
 		C9DC3CFD1D5349FC0073C9B2 /* RSStockListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3CFC1D5349FC0073C9B2 /* RSStockListCell.m */; };
 		C9DC3D001D534A0A0073C9B2 /* RXTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3CFF1D534A0A0073C9B2 /* RXTestView.m */; };
+		C9DC3D021D534EE00073C9B2 /* sz002739 in Resources */ = {isa = PBXBuildFile; fileRef = C9DC3D011D534EE00073C9B2 /* sz002739 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		C9DC3CFC1D5349FC0073C9B2 /* RSStockListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStockListCell.m; sourceTree = "<group>"; };
 		C9DC3CFE1D534A0A0073C9B2 /* RXTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTestView.h; sourceTree = "<group>"; };
 		C9DC3CFF1D534A0A0073C9B2 /* RXTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTestView.m; sourceTree = "<group>"; };
+		C9DC3D011D534EE00073C9B2 /* sz002739 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sz002739; sourceTree = "<group>"; };
 		D709FE813921A34B7684DAAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E753B031F8EAEBD0C8806DFD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,9 +175,9 @@
 		C9DC3CDF1D5343940073C9B2 /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				C9DC3CE01D53448A0073C9B2 /* stock */,
 				C9DC3CE91D5345210073C9B2 /* shanghai */,
 				C9DC3CEB1D5345210073C9B2 /* shenzhen */,
-				C9DC3CE01D53448A0073C9B2 /* stock */,
 			);
 			path = Res;
 			sourceTree = "<group>";
@@ -191,6 +193,7 @@
 		C9DC3CEB1D5345210073C9B2 /* shenzhen */ = {
 			isa = PBXGroup;
 			children = (
+				C9DC3D011D534EE00073C9B2 /* sz002739 */,
 			);
 			path = shenzhen;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			files = (
 				C985F6341D504323004D654D /* Assets.xcassets in Resources */,
 				C9DC3CEC1D5345210073C9B2 /* sh603959 in Resources */,
+				C9DC3D021D534EE00073C9B2 /* sz002739 in Resources */,
 				C9DC3CE11D53448A0073C9B2 /* stock in Resources */,
 				C9DC3CE81D5344E30073C9B2 /* RSStockListViewController.xib in Resources */,
 				C985F6421D504358004D654D /* MainViewController.xib in Resources */,

@@ -102,7 +102,7 @@
         cell = [RSStockListCell cell];
     }
     [cell setData:data];
-    return nil;
+    return cell;
 }
 
 

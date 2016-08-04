@@ -81,15 +81,14 @@
 
 
 
-#define k_UI_Color_Background  [UIColor rx_colorWithString:@"#0d0d0d"]
+#define k_UI_Color_Background  [UIColor rx_colorWithString:@"#fafafa"]
 #define k_UI_Color_Background2  [UIColor rx_colorWithString:@"#ededed"]
 #define k_UI_Color_Line        [UIColor rx_colorWithString:@"#e5e5e5"]
 #define k_UI_Color_Line2        [UIColor rx_colorWithString:@"#cbcbcb"]
 #define k_UI_Color_Line3        [UIColor rx_colorWithString:@"#cccccc"]
 #define k_UI_Color_MainText     [UIColor rx_colorWithString:@"#666666"]
 #define k_UI_Color_SubText     [UIColor rx_colorWithString:@"#999999"]
-#define k_UI_Color_OP_Background [UIColor rx_colorWithString:@"#333333"]
-#define k_UI_Color_OP_Line [UIColor rx_colorWithString:@"#2a2a2a"]
+
 
 
 #import "RXAppDefineHeader.h"
