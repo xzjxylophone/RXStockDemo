@@ -8,6 +8,4 @@
 
 #import "RXAppDynamicDefine.h"
 
-@implementation RXAppDynamicDefine
 
-@end

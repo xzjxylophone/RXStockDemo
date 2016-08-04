@@ -8,6 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RXAppDynamicDefine : NSObject
 
-@end
+

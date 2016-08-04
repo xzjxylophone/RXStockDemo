@@ -28,8 +28,7 @@
 - (void)showMain
 {
     
-    UIViewController *vc = nil;
-    vc = [[MainViewController alloc] init];
+    UIViewController *vc = [RXVCMediator viewControllerWithString:@"rxpage://RSStockListViewController" query:nil];
     self.mainNC = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = self.mainNC;
 }

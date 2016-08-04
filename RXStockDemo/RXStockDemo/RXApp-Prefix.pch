@@ -103,6 +103,9 @@
 #import "RXAppDynamicManager.h"
 
 
+// current app
+#import "RSResManager.h"
+
 
 //#import "RXUtils.h"
 //#import "MBProgressHUD+RXUtility.h"

@@ -16,6 +16,12 @@
 		C985F6481D5045C5004D654D /* RXAppDynamicConstString.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F6471D5045C5004D654D /* RXAppDynamicConstString.m */; };
 		C985F64B1D50468C004D654D /* RXAppDynamicDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F64A1D50468C004D654D /* RXAppDynamicDefine.m */; };
 		C985F64E1D50469B004D654D /* RXAppDynamicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F64D1D50469B004D654D /* RXAppDynamicManager.m */; };
+		C9DC3CE11D53448A0073C9B2 /* stock in Resources */ = {isa = PBXBuildFile; fileRef = C9DC3CE01D53448A0073C9B2 /* stock */; };
+		C9DC3CE71D5344E30073C9B2 /* RSStockListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3CE51D5344E30073C9B2 /* RSStockListViewController.m */; };
+		C9DC3CE81D5344E30073C9B2 /* RSStockListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DC3CE61D5344E30073C9B2 /* RSStockListViewController.xib */; };
+		C9DC3CEC1D5345210073C9B2 /* sh603959 in Resources */ = {isa = PBXBuildFile; fileRef = C9DC3CEA1D5345210073C9B2 /* sh603959 */; };
+		C9DC3CEF1D5346A30073C9B2 /* RSResManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3CEE1D5346A30073C9B2 /* RSResManager.m */; };
+		C9DC3CF31D5347990073C9B2 /* RXStockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3CF21D5347990073C9B2 /* RXStockObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,15 @@
 		C985F64A1D50468C004D654D /* RXAppDynamicDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXAppDynamicDefine.m; sourceTree = "<group>"; };
 		C985F64C1D50469B004D654D /* RXAppDynamicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAppDynamicManager.h; sourceTree = "<group>"; };
 		C985F64D1D50469B004D654D /* RXAppDynamicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXAppDynamicManager.m; sourceTree = "<group>"; };
+		C9DC3CE01D53448A0073C9B2 /* stock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stock; sourceTree = "<group>"; };
+		C9DC3CE41D5344E30073C9B2 /* RSStockListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStockListViewController.h; sourceTree = "<group>"; };
+		C9DC3CE51D5344E30073C9B2 /* RSStockListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStockListViewController.m; sourceTree = "<group>"; };
+		C9DC3CE61D5344E30073C9B2 /* RSStockListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSStockListViewController.xib; sourceTree = "<group>"; };
+		C9DC3CEA1D5345210073C9B2 /* sh603959 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sh603959; sourceTree = "<group>"; };
+		C9DC3CED1D5346A30073C9B2 /* RSResManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSResManager.h; sourceTree = "<group>"; };
+		C9DC3CEE1D5346A30073C9B2 /* RSResManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSResManager.m; sourceTree = "<group>"; };
+		C9DC3CF11D5347990073C9B2 /* RXStockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXStockObject.h; sourceTree = "<group>"; };
+		C9DC3CF21D5347990073C9B2 /* RXStockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXStockObject.m; sourceTree = "<group>"; };
 		D709FE813921A34B7684DAAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E753B031F8EAEBD0C8806DFD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +105,9 @@
 		C985F6261D504323004D654D /* RXStockDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C9DC3CF01D5347840073C9B2 /* Model */,
+				C9DC3CDE1D5343940073C9B2 /* Controllers */,
+				C9DC3CDF1D5343940073C9B2 /* Res */,
 				C985F6441D5045C5004D654D /* Utility */,
 				C985F62A1D504323004D654D /* AppDelegate.h */,
 				C985F62B1D504323004D654D /* AppDelegate.m */,
@@ -116,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				C985F6451D5045C5004D654D /* RXAppDynamic */,
+				C9DC3CED1D5346A30073C9B2 /* RSResManager.h */,
+				C9DC3CEE1D5346A30073C9B2 /* RSResManager.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -131,6 +151,50 @@
 				C985F64D1D50469B004D654D /* RXAppDynamicManager.m */,
 			);
 			path = RXAppDynamic;
+			sourceTree = "<group>";
+		};
+		C9DC3CDE1D5343940073C9B2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9DC3CE41D5344E30073C9B2 /* RSStockListViewController.h */,
+				C9DC3CE51D5344E30073C9B2 /* RSStockListViewController.m */,
+				C9DC3CE61D5344E30073C9B2 /* RSStockListViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C9DC3CDF1D5343940073C9B2 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				C9DC3CE91D5345210073C9B2 /* shanghai */,
+				C9DC3CEB1D5345210073C9B2 /* shenzhen */,
+				C9DC3CE01D53448A0073C9B2 /* stock */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		C9DC3CE91D5345210073C9B2 /* shanghai */ = {
+			isa = PBXGroup;
+			children = (
+				C9DC3CEA1D5345210073C9B2 /* sh603959 */,
+			);
+			path = shanghai;
+			sourceTree = "<group>";
+		};
+		C9DC3CEB1D5345210073C9B2 /* shenzhen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = shenzhen;
+			sourceTree = "<group>";
+		};
+		C9DC3CF01D5347840073C9B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9DC3CF11D5347990073C9B2 /* RXStockObject.h */,
+				C9DC3CF21D5347990073C9B2 /* RXStockObject.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C985F6341D504323004D654D /* Assets.xcassets in Resources */,
+				C9DC3CEC1D5345210073C9B2 /* sh603959 in Resources */,
+				C9DC3CE11D53448A0073C9B2 /* stock in Resources */,
+				C9DC3CE81D5344E30073C9B2 /* RSStockListViewController.xib in Resources */,
 				C985F6421D504358004D654D /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,11 +320,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DC3CE71D5344E30073C9B2 /* RSStockListViewController.m in Sources */,
 				C985F62C1D504323004D654D /* AppDelegate.m in Sources */,
 				C985F6411D504358004D654D /* MainViewController.m in Sources */,
+				C9DC3CEF1D5346A30073C9B2 /* RSResManager.m in Sources */,
 				C985F6481D5045C5004D654D /* RXAppDynamicConstString.m in Sources */,
 				C985F64E1D50469B004D654D /* RXAppDynamicManager.m in Sources */,
 				C985F6291D504323004D654D /* main.m in Sources */,
+				C9DC3CF31D5347990073C9B2 /* RXStockObject.m in Sources */,
 				C985F64B1D50468C004D654D /* RXAppDynamicDefine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
