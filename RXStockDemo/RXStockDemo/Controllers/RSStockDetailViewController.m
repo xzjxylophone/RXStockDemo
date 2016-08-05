@@ -54,10 +54,9 @@
     self.title = @"";
     
     
-    MJRefreshHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refresh)];
-    self.tableView.mj_header = header;
     
-    
+    self.inputRSStockObject = self.rx_query[SKey_data];
+    self.title = self.inputRSStockObject.name;
     
     
     self.rxTVProObject = [[RXTVProtocolObject alloc] init];
@@ -80,7 +79,8 @@
 #pragma mark - Private
 - (void)loadCellData
 {
-    
+    self.rxTVProObject.functionItems = @[[[RSResManager sharedInstance] arrayWithRSStockObject:self.inputRSStockObject]];
+    [self.tableView reloadData];
 }
 - (void)refresh
 {

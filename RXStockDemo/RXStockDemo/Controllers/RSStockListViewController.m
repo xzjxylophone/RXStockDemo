@@ -49,11 +49,9 @@
 {
     self.hidesBottomBarWhenPushed = YES;
     self.view.backgroundColor = k_UI_Color_Background;
-    self.title = @"";
+    self.title = @"股票列表";
     
     
-    MJRefreshHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refresh)];
-    self.tableView.mj_header = header;
     
     
     

@@ -8,6 +8,7 @@
 
 #import "RSResManager.h"
 #import "RSStockObject.h"
+#import "RSStockDetailObject.h"
 
 
 @implementation RSResManager
@@ -41,6 +42,28 @@
         self.stockArray  = resultArray;
     }
     return self;
+}
+
+
+- (NSArray *)arrayWithRSStockObject:(RSStockObject *)rsStockObject
+{
+    NSMutableArray *resultArray = [NSMutableArray array];
+    NSString *identify = rsStockObject.identify;
+    NSString *path = [[NSBundle mainBundle] pathForResource:identify ofType:@""];
+    
+    NSString *str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSArray *array = [str componentsSeparatedByString:@"\n"];
+
+
+    for (NSString *str in array) {
+        RSStockDetailObject *object = [RSStockDetailObject rsStockDetailObjectWithString:str];
+        if (object != nil) {
+            [resultArray addObject:object];
+        }
+    }
+
+    return resultArray;
+
 }
 
 

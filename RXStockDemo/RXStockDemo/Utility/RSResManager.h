@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "RSStockObject.h"
+#import "RSStockDetailObject.h"
 @interface RSResManager : NSObject
 
 @property (nonatomic, strong) NSArray *stockArray;
+
+
+- (NSArray *)arrayWithRSStockObject:(RSStockObject *)rsStockObject;
+
+
 
 + (RSResManager *)sharedInstance;
 

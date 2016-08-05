@@ -28,6 +28,7 @@
 		C9DC3D061D534F800073C9B2 /* RSStockDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3D041D534F800073C9B2 /* RSStockDetailViewController.m */; };
 		C9DC3D071D534F800073C9B2 /* RSStockDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DC3D051D534F800073C9B2 /* RSStockDetailViewController.xib */; };
 		C9DC3D0A1D5350020073C9B2 /* RSStockDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3D091D5350020073C9B2 /* RSStockDetailCell.m */; };
+		C9DC3D0D1D5429740073C9B2 /* RSStockDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3D0C1D5429740073C9B2 /* RSStockDetailObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		C9DC3D051D534F800073C9B2 /* RSStockDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSStockDetailViewController.xib; sourceTree = "<group>"; };
 		C9DC3D081D5350020073C9B2 /* RSStockDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStockDetailCell.h; sourceTree = "<group>"; };
 		C9DC3D091D5350020073C9B2 /* RSStockDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStockDetailCell.m; sourceTree = "<group>"; };
+		C9DC3D0B1D5429740073C9B2 /* RSStockDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStockDetailObject.h; sourceTree = "<group>"; };
+		C9DC3D0C1D5429740073C9B2 /* RSStockDetailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStockDetailObject.m; sourceTree = "<group>"; };
 		D709FE813921A34B7684DAAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E753B031F8EAEBD0C8806DFD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -222,6 +225,8 @@
 			children = (
 				C9DC3CF51D5349E40073C9B2 /* RSStockObject.h */,
 				C9DC3CF61D5349E40073C9B2 /* RSStockObject.m */,
+				C9DC3D0B1D5429740073C9B2 /* RSStockDetailObject.h */,
+				C9DC3D0C1D5429740073C9B2 /* RSStockDetailObject.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				C9DC3D001D534A0A0073C9B2 /* RXTestView.m in Sources */,
 				C9DC3CFD1D5349FC0073C9B2 /* RSStockListCell.m in Sources */,
 				C985F64E1D50469B004D654D /* RXAppDynamicManager.m in Sources */,
+				C9DC3D0D1D5429740073C9B2 /* RSStockDetailObject.m in Sources */,
 				C985F6291D504323004D654D /* main.m in Sources */,
 				C985F64B1D50468C004D654D /* RXAppDynamicDefine.m in Sources */,
 				C9DC3CF71D5349E40073C9B2 /* RSStockObject.m in Sources */,
