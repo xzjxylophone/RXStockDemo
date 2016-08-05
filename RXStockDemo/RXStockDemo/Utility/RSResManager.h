@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "RSStockObject.h"
 #import "RSStockDetailObject.h"
+
+
+// http://0411.iteye.com/blog/1068239
 @interface RSResManager : NSObject
 
 @property (nonatomic, strong) NSArray *stockArray;

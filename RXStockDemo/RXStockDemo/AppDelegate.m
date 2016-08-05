@@ -21,7 +21,20 @@
 {
 
     
-    
+//    RXNetworkingConfigManager *cm = [RXNetworkingConfigManager sharedInstance];
+//    NSString *host = @"";
+//    host = @"http://ichart.yahoo.com";
+//    cm.baseUrlString = host;
+//    cm.suffixParameters = @{@"clientVersion":[NSString stringWithFormat:@"iOS%@", [RXInfoHelper appVersion]]};
+//    cm.timeoutInterval = 45;
+//    cm.resultCodeKey = @"errno";
+//    cm.resultMsgKey = @"error";
+//    cm.customServerResultAction = ^(NSInteger code) {
+//        if (code == 9999) {
+//            [[RXUserManager sharedInstance] logout];
+//            
+//        }
+//    };
     
 }
 

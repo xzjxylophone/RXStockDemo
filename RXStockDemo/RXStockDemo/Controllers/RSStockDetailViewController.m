@@ -20,6 +20,9 @@
 @property (nonatomic, strong) RSStockObject *inputRSStockObject;
 
 @property (nonatomic, strong) RSStockDetailSectionTitleView *rsStockDetailSectionTitleView;
+
+@property(nonatomic,strong) NSURLSessionDownloadTask *task;
+
 @end
 
 @implementation RSStockDetailViewController
@@ -93,10 +96,43 @@
 }
 - (void)refresh
 {
-    
+    [self.task resume];
 }
 
-
+- (NSURLSessionDownloadTask *)task
+{
+    
+    if (!_task) {
+        
+        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+        
+        NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ichart.yahoo.com/table.csv?s=000002.sz"]];
+        
+        _task=[session downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+            //下载进度
+            NSLog(@"%@",downloadProgress);
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                
+                
+            }];
+            
+        } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+            
+            //下载到哪个文件夹
+            NSString *cachePath=NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+            NSString *fileName=[cachePath stringByAppendingPathComponent:response.suggestedFilename];
+            
+            return [NSURL fileURLWithPath:fileName];
+            
+        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+            
+            //下载完成了
+            NSLog(@"下载完成了 %@",filePath);
+        }];
+    }
+    
+    return _task;
+}
 
 
 

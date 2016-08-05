@@ -72,6 +72,8 @@
 #import "RXView.h"
 #import "RXBannerView.h"
 
+#import "MBProgressHUD+RXHeader.h"
+#import "AFNetworking+RXHeader.h"
 
 #import "RXTVProtocolObject.h"
 
