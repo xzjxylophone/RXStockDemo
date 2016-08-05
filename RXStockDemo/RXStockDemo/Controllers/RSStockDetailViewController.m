@@ -9,6 +9,7 @@
 #import "RSStockDetailViewController.h"
 #import "RSStockObject.h"
 #import "RSStockDetailCell.h"
+#import "RSStockDetailSectionTitleView.h"
 
 @interface RSStockDetailViewController () <RXTVProtocolObjectDelegate>
 
@@ -17,6 +18,8 @@
 
 
 @property (nonatomic, strong) RSStockObject *inputRSStockObject;
+
+@property (nonatomic, strong) RSStockDetailSectionTitleView *rsStockDetailSectionTitleView;
 @end
 
 @implementation RSStockDetailViewController
@@ -58,6 +61,8 @@
     self.inputRSStockObject = self.rx_query[SKey_data];
     self.title = self.inputRSStockObject.name;
     
+    self.rsStockDetailSectionTitleView = [RSStockDetailSectionTitleView rxView];
+    
     
     self.rxTVProObject = [[RXTVProtocolObject alloc] init];
     self.rxTVProObject.delegate = self;
@@ -79,7 +84,11 @@
 #pragma mark - Private
 - (void)loadCellData
 {
-    self.rxTVProObject.functionItems = @[[[RSResManager sharedInstance] arrayWithRSStockObject:self.inputRSStockObject]];
+    RXTVSectionItem *item = [[RXTVSectionItem alloc] init];
+    item.data = self.rsStockDetailSectionTitleView;
+    item.items = [[RSResManager sharedInstance] arrayWithRSStockObject:self.inputRSStockObject];
+    
+    self.rxTVProObject.functionItems = @[item];
     [self.tableView reloadData];
 }
 - (void)refresh

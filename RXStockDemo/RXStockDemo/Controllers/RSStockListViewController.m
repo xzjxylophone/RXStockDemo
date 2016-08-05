@@ -49,7 +49,7 @@
 {
     self.hidesBottomBarWhenPushed = YES;
     self.view.backgroundColor = k_UI_Color_Background;
-    self.title = @"股票列表";
+    self.title = @"列表";
     
     
     

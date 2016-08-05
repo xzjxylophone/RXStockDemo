@@ -29,6 +29,8 @@
 		C9DC3D071D534F800073C9B2 /* RSStockDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DC3D051D534F800073C9B2 /* RSStockDetailViewController.xib */; };
 		C9DC3D0A1D5350020073C9B2 /* RSStockDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3D091D5350020073C9B2 /* RSStockDetailCell.m */; };
 		C9DC3D0D1D5429740073C9B2 /* RSStockDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3D0C1D5429740073C9B2 /* RSStockDetailObject.m */; };
+		C9DC3D141D543E4A0073C9B2 /* NSDate+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3D131D543E4A0073C9B2 /* NSDate+RXUtility.m */; };
+		C9DC3D171D543EF70073C9B2 /* RSStockDetailSectionTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3D161D543EF70073C9B2 /* RSStockDetailSectionTitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,10 @@
 		C9DC3D091D5350020073C9B2 /* RSStockDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStockDetailCell.m; sourceTree = "<group>"; };
 		C9DC3D0B1D5429740073C9B2 /* RSStockDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStockDetailObject.h; sourceTree = "<group>"; };
 		C9DC3D0C1D5429740073C9B2 /* RSStockDetailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStockDetailObject.m; sourceTree = "<group>"; };
+		C9DC3D121D543E4A0073C9B2 /* NSDate+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RXUtility.h"; sourceTree = "<group>"; };
+		C9DC3D131D543E4A0073C9B2 /* NSDate+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RXUtility.m"; sourceTree = "<group>"; };
+		C9DC3D151D543EF70073C9B2 /* RSStockDetailSectionTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStockDetailSectionTitleView.h; sourceTree = "<group>"; };
+		C9DC3D161D543EF70073C9B2 /* RSStockDetailSectionTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStockDetailSectionTitleView.m; sourceTree = "<group>"; };
 		D709FE813921A34B7684DAAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E753B031F8EAEBD0C8806DFD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -153,6 +159,7 @@
 		C985F6441D5045C5004D654D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C9DC3D111D543E4A0073C9B2 /* RX */,
 				C985F6451D5045C5004D654D /* RXAppDynamic */,
 				C9DC3CED1D5346A30073C9B2 /* RSResManager.h */,
 				C9DC3CEE1D5346A30073C9B2 /* RSResManager.m */,
@@ -256,8 +263,19 @@
 			children = (
 				C9DC3CFE1D534A0A0073C9B2 /* RXTestView.h */,
 				C9DC3CFF1D534A0A0073C9B2 /* RXTestView.m */,
+				C9DC3D151D543EF70073C9B2 /* RSStockDetailSectionTitleView.h */,
+				C9DC3D161D543EF70073C9B2 /* RSStockDetailSectionTitleView.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		C9DC3D111D543E4A0073C9B2 /* RX */ = {
+			isa = PBXGroup;
+			children = (
+				C9DC3D121D543E4A0073C9B2 /* NSDate+RXUtility.h */,
+				C9DC3D131D543E4A0073C9B2 /* NSDate+RXUtility.m */,
+			);
+			path = RX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +411,8 @@
 				C985F6481D5045C5004D654D /* RXAppDynamicConstString.m in Sources */,
 				C9DC3D001D534A0A0073C9B2 /* RXTestView.m in Sources */,
 				C9DC3CFD1D5349FC0073C9B2 /* RSStockListCell.m in Sources */,
+				C9DC3D171D543EF70073C9B2 /* RSStockDetailSectionTitleView.m in Sources */,
+				C9DC3D141D543E4A0073C9B2 /* NSDate+RXUtility.m in Sources */,
 				C985F64E1D50469B004D654D /* RXAppDynamicManager.m in Sources */,
 				C9DC3D0D1D5429740073C9B2 /* RSStockDetailObject.m in Sources */,
 				C985F6291D504323004D654D /* main.m in Sources */,

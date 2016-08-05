@@ -19,6 +19,7 @@
 @property (nonatomic, assign) double tenAveragePrice;           // 十日均价
 @property (nonatomic, assign) double thirtyAveragePrice;        // 三十日均价
 
+@property (nonatomic, readonly) NSString *showDateString;
 
 + (id)rsStockDetailObjectWithString:(NSString *)string;
 
