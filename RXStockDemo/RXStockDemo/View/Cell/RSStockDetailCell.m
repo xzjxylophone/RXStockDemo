@@ -62,7 +62,7 @@
     if ([data isKindOfClass:[RSStockDetailObject class]]) {
         RSStockDetailObject *tmp = data;
         self.nameLabel.text = [NSString stringWithFormat:@"%@", tmp.date];
-        self.identifyLabel.text = [NSString stringWithFormat:@"%.2f", tmp.curPrice];
+        self.identifyLabel.text = [NSString stringWithFormat:@"%.2f, %.4f, %.4f, %.4f, %.4f", tmp.curPrice, tmp.fiveAveragePrice, tmp.sevenAveragePrice, tmp.tenAveragePrice, tmp.thirtyAveragePrice];
     } else {
         
     }

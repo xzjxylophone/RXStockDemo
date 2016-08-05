@@ -61,9 +61,34 @@
             [resultArray addObject:object];
         }
     }
+    
+    
+    for (NSInteger i = 0; i < resultArray.count; i++) {
+        RSStockDetailObject *object = resultArray[i];
+        
+        object.fiveAveragePrice = [self averagePriceWithArray:resultArray startIndex:i averageNumber:5];
+        object.sevenAveragePrice = [self averagePriceWithArray:resultArray startIndex:i averageNumber:7];
+        object.tenAveragePrice = [self averagePriceWithArray:resultArray startIndex:i averageNumber:10];
+        object.thirtyAveragePrice = [self averagePriceWithArray:resultArray startIndex:i averageNumber:30];
+    }
+    
 
     return resultArray;
 
+}
+
+- (double)averagePriceWithArray:(NSArray *)array startIndex:(NSInteger)startIndex averageNumber:(NSInteger)number
+{
+    NSInteger count = array.count;
+    NSInteger realCount = MIN(number, count - startIndex);
+    double total = 0;
+    for (NSInteger i = startIndex; i < realCount + startIndex; i++) {
+        RSStockDetailObject *object = array[i];
+        total += object.curPrice;
+    }
+    double result = total / realCount;
+    return result;
+    
 }
 
 
