@@ -14,12 +14,13 @@
 + (id)rsStockObjectWithString:(NSString *)string
 {
     NSArray *array = [string componentsSeparatedByString:@","];
-    if (array.count != 2) {
+    if (array.count != 3) {
         return nil;
     }
     RSStockObject *result = [[RSStockObject alloc] init];
     result.identify = array[0];
     result.name = array[1];
+    result.isInLocal = [array[2] integerValue] == 1;
     return result;
 }
 

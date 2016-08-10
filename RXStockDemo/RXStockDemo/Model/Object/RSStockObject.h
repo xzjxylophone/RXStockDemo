@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *identify;
+@property (nonatomic, assign) BOOL isInLocal;
 
 
 + (id)rsStockObjectWithString:(NSString *)string;
