@@ -23,6 +23,8 @@
 
 @property(nonatomic,strong) NSURLSessionDownloadTask *task;
 
+@property (nonatomic, strong) NSArray *itemArray;
+
 @end
 
 @implementation RSStockDetailViewController
@@ -80,8 +82,11 @@
 }
 - (void)initializeAction
 {
-    [self loadCellData];
-    [self refresh];
+    if (self.inputRSStockObject.isInLocal) {
+        [self refreshWithLocal];
+    } else {
+        [self refreshWithNet];
+    }
 }
 
 #pragma mark - Private
@@ -89,50 +94,60 @@
 {
     RXTVSectionItem *item = [[RXTVSectionItem alloc] init];
     item.data = self.rsStockDetailSectionTitleView;
-    item.items = [[RSResManager sharedInstance] arrayWithRSStockObject:self.inputRSStockObject];
+    item.items = self.itemArray;
     
     self.rxTVProObject.functionItems = @[item];
     [self.tableView reloadData];
 }
-- (void)refresh
+
+- (void)refreshWithLocal
 {
+    self.itemArray = [[RSResManager sharedInstance] arrayWithRSStockObject:self.inputRSStockObject];;
+    [self loadCellData];
+}
+- (void)refreshWithNet
+{
+    [self rx_showHUDWithMessage:@"正在加载"];
+    __weak __typeof(self) weakSelf = self;
+    NSURLSessionConfiguration *configurate = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configurate.requestCachePolicy = NSURLRequestReloadIgnoringLocalAndRemoteCacheData;
+    AFHTTPSessionManager *session = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configurate];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ichart.yahoo.com/table.csv?s=000002.sz"]];
+    
+    self.task = [session downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        //下载进度
+        NSLog(@"%@",downloadProgress);
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            
+            
+        }];
+        
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        
+        //下载到哪个文件夹
+        NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+        NSString *fileName = [cachePath stringByAppendingPathComponent:response.suggestedFilename];
+        
+        return [NSURL fileURLWithPath:fileName];
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        
+        [weakSelf rx_hideHUD];
+        //下载完成了
+        
+        
+        NSString *text = [NSString stringWithContentsOfURL:filePath encoding:NSUTF8StringEncoding error:nil];
+        NSArray *array = [text componentsSeparatedByString:@"\n"];
+        
+        for (NSString *str in array) {
+            
+            NSLog(@"text:%@", str);
+        }
+    }];
     [self.task resume];
 }
 
-- (NSURLSessionDownloadTask *)task
-{
-    
-    if (!_task) {
-        
-        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-        
-        NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ichart.yahoo.com/table.csv?s=000002.sz"]];
-        
-        _task=[session downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-            //下载进度
-            NSLog(@"%@",downloadProgress);
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                
-                
-            }];
-            
-        } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-            
-            //下载到哪个文件夹
-            NSString *cachePath=NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
-            NSString *fileName=[cachePath stringByAppendingPathComponent:response.suggestedFilename];
-            
-            return [NSURL fileURLWithPath:fileName];
-            
-        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-            
-            //下载完成了
-            NSLog(@"下载完成了 %@",filePath);
-        }];
-    }
-    
-    return _task;
-}
+
 
 
 
